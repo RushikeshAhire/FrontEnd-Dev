@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="calc.js"></script>
+</head>
+
+<body>
+    <h1> Calculator </h1>
+    <label>Number 1 : </label><input type="number" id="n1"><br>
+    <label>Number 2 : </label><input type="number" id="n2"><br>
+    <label>Oprator : </label>
+    <select id="opr">
+        <option value="add">ADD</option>
+        <option value="sub">SUB</option>
+        <option value="mul">MUL</option>
+    </select><br>
+    <button onclick="calc()">Caculate</button><br>
+    <h1>Result : <span id="res">..</span></h1>
+</body>
+
+</html>

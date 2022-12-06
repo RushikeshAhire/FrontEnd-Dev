@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function checkId(uid){
+	request = new XMLHttpRequest();
+	request.open("POST","loginservlet",true);
+	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	//request.setRequestHeader("Content-type", "application/json")
+	request.onreadystatechange=function(){
+		if(request.readyState==4){
+			document.getElementById("msg").innerText = request.responseText;
+		}
+	}
+	//request.setRequestHeader("Content-Type", "application/json")
+
+	//data = {"uname":uid}
+	//console.log(data.uname)
+	request.send("uname="+uid);
+	stringdata = JSON.stringify({"uname":uid});
+	console.log(stringdata);
+	request.send(stringdata);
+}
+
+</script>
+</head>
+<body>
+	<h1>New User</h1>
+	<label>User ID : </label><input type="text" onblur="checkId(this.value)"><span id="msg"></span>
+	<hr>
+	<a href="loginservlet?uname=naushad">Check Servlet</a>
+	
+	<form action="loginservlet" method="get" enctype="application/x-www-form-urlencoded">
+		<input type="text" name="uname"> 
+		<input type="submit">
+	</form>
+</body>
+</html>

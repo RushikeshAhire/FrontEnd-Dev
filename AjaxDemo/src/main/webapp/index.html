@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function getScore() {
+		rakesh = new XMLHttpRequest();
+		method = "GET";
+		url = "score.txt";
+		rakesh.open(method, url, true);
+		rakesh.onreadystatechange = function() {
+			rs = rakesh.readyState;
+			//alert(rs);
+			if (rs == 4) {
+				sdata = rakesh.responseText;
+				cscoreObjb1 = document.getElementById("b1score");
+				cscoreObjb2 = document.getElementById("b2score");
+				console.log(typeof(sdata));
+				jdata = JSON.parse(sdata);
+				console.table(jdata);
+				sachinscore = jdata.sachin;
+				kohliscore = jdata.kohli;
+				cscoreObjb1.innerText = sachinscore;
+				cscoreObjb2.innerText = kohliscore;
+				document.getElementById("tscore").innerText = sachinscore+kohliscore
+			}
+		}
+		rakesh.send(null);
+	}
+	setInterval("getScore()", 5000);
+</script>
+</head>
+<body>
+	<h1>Ajax Demo</h1>
+	<h1>Total Score : <span id="tscore"></span></h1>
+	<label>Sachin : </label>
+	<span id="b1score"></span>
+	<br>
+	<label>Kohli : </label>
+	<span id="b2score"></span>
+	<br>
+	<!-- <button onclick="getScore()">Get Score</button> -->
+</body>
+</html>

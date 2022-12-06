@@ -1,0 +1,30 @@
+p span {
+    color: red
+}
+
+div h1 span {
+    color: blue
+}
+
+
+/* h1,
+h2,
+p,
+input {
+
+    color: darkgoldenrod;
+    text-shadow: 2px 2px red;
+    border-style: double;
+    border-radius: 10px;
+}
+
+div {
+    background-color: bisque;
+    border-style: solid;
+    margin-left: 50px;
+}
+
+body {
+    margin-left: 100px;
+}
+ */

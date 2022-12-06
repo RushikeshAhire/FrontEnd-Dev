@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    label {
+        color: red;
+        text-align: right;
+    }
+    tr td:first-child{
+        text-align: right;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User Registeration Form</title>
+</head>
+
+<body>
+
+    <img src="tp.jpg" title="asd">
+    <datalist id="browsers">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <fieldset>
+
+        <legend>Registration Form</legend>
+        <table>
+            <form action="display.html" method="get">
+                <tr>
+                    <td> <label>User Id :</label> </td>
+                    <td> <input type="text" required placeholder="Enter Id" name="uid" maxlength="10"
+                            pattern="[A-Za-z0-9]{1,15}"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Password :</label> </td>
+                    <td> <input type="password" required name="pwd" placeholder="Enter PAssword" maxlength="10"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="browser">Choose your browser from the list:</label> </td>
+                    <td> <input list="browsers" name="browser" id="browser"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="color">Choose Color :</label> </td>
+                    <td> <input type="color" id="color"> </td>
+                </tr>
+                <tr>
+                    <td> <label>User Name :</label> </td>
+                    <td> <input type="text" required placeholder="Enter Name" name="uname"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Enter Email :</label> </td>
+                    <td> <input type="email" required placeholder="Enter Email" name="email"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Image :</label> </td>
+                    <td> <img src="tp.jpg" title="Image of Aamir Khan"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Enter Age :</label> </td>
+                    <td> <input type="number" max="100" min="10" required placeholder="Enter age" name="age"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="dob">Enter DOB :</label> </td>
+                    <td> <input type="date" id="dob" name="dob"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="song"> Songs :</label> </td>
+                    <td> <audio src="tp.mp3" controls autoplay> </td>
+                </tr>
+                <tr>
+                    <td> <label for="movie"> Movies :</label> </td>
+                    <td> <video src="avataar.mp4" controls autoplay> </td>
+                </tr>
+                <tr>
+                    <td> <label for="Uploads"> Upload Files :</label> </td>
+                    <td> <input type="file" id="Uploads"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Gender :</label> </td>
+                    <td><label for="m">Male</label> <input checked type="radio" name="g" id="m" value="male" required>
+                        <label for="f">Female</label> <input type="radio" name="g" id="f" value="female" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="address">Address :</label> </td>
+                    <td> <textarea rows="10" cols="20" id="address" name="address"
+                            placeholder="Enter Address"></textarea> </td>
+                </tr>
+                <tr>
+                    <td> <label for="education">Education :</label> </td>
+                    <td> <select id="education" name="education">
+                            <option>Post Graduate</option>
+                            <option>Graduate</option>
+                            <option selected>Intermediate</option>
+                            <option>High School</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td> <label for="educations">educations :</label> </td>
+                    <td> <select id="educations" name="educations" multiple>
+                            <option>Post Graduate</option>
+                            <option>Graduate</option>
+                            <option selected>Intermediate</option>
+                            <option>High School</option>
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td> <label>Hobbies :</label> </td>
+                    <td><label for="sport">Sports</label> <input type="checkbox" name="hobbies" id="sport"
+                            value="sports">
+                        <label for="music">Music</label> <input type="checkbox" name="hobbies" id="music" value="music">
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label>Buttons :</label> </td>
+                    <td> <input type="submit" value="Sign Up"> </td>
+                </tr>
+            </form>
+        </table>
+
+    </fieldset>
+
+</body>
+
+</html>
